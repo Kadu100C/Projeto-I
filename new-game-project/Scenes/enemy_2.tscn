@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://jxlxjvl6ty4t"]
+
+[ext_resource type="Texture2D" uid="uid://blbtuuwhamjw5" path="res://Sprites/sprite sheep semelhante.png" id="1_t3d2o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_527ua"]
+atlas = ExtResource("1_t3d2o")
+region = Rect2(0, 72, 17, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_48bj6"]
+atlas = ExtResource("1_t3d2o")
+region = Rect2(17, 72, 17, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qit8y"]
+atlas = ExtResource("1_t3d2o")
+region = Rect2(34, 72, 17, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4gdgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_527ua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_48bj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qit8y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Enemy 2" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_4gdgy")
+autoplay = "default"
+frame_progress = 0.596296

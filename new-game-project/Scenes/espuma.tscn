@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bf1j0iyx6q424"]
+
+[ext_resource type="Texture2D" uid="uid://basyfav30wflq" path="res://Sprites/Tilemap.png" id="1_gxvmq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2f2a"]
+atlas = ExtResource("1_gxvmq")
+region = Rect2(64, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2f2ch"]
+atlas = ExtResource("1_gxvmq")
+region = Rect2(64, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wnsat"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2f2a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2f2ch")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Espuma" type="AnimatedSprite2D"]
+z_index = 6
+sprite_frames = SubResource("SpriteFrames_wnsat")
+autoplay = "default"
+frame_progress = 0.542026

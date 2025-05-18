@@ -1,0 +1,134 @@
+[gd_scene load_steps=5 format=3 uid="uid://deuo0huqe3pdi"]
+
+[ext_resource type="Texture2D" uid="uid://basyfav30wflq" path="res://Sprites/Tilemap.png" id="1_vhvyx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onk3d"]
+atlas = ExtResource("1_vhvyx")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibajw"]
+atlas = ExtResource("1_vhvyx")
+region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8rv7q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onk3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibajw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Cachoeira" type="AnimatedSprite2D"]
+position = Vector2(-8, -8)
+sprite_frames = SubResource("SpriteFrames_8rv7q")
+autoplay = "default"
+frame_progress = 0.315163
+
+[node name="Cachoeira2" type="AnimatedSprite2D" parent="."]
+position = Vector2(16, -64)
+sprite_frames = SubResource("SpriteFrames_8rv7q")
+autoplay = "default"
+frame_progress = 0.51293
+
+[node name="Cachoeira3" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -64)
+sprite_frames = SubResource("SpriteFrames_8rv7q")
+autoplay = "default"
+frame_progress = 0.51293
+
+[node name="Cachoeira4" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -48)
+sprite_frames = SubResource("SpriteFrames_8rv7q")
+autoplay = "default"
+frame_progress = 0.51293
+
+[node name="Cachoeira5" type="AnimatedSprite2D" parent="."]
+position = Vector2(16, -48)
+sprite_frames = SubResource("SpriteFrames_8rv7q")
+autoplay = "default"
+frame_progress = 0.51293
+
+[node name="Cachoeira6" type="AnimatedSprite2D" parent="."]
+position = Vector2(16, -32)
+sprite_frames = SubResource("SpriteFrames_8rv7q")
+autoplay = "default"
+frame_progress = 0.51293
+
+[node name="Cachoeira7" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -32)
+sprite_frames = SubResource("SpriteFrames_8rv7q")
+autoplay = "default"
+frame_progress = 0.51293
+
+[node name="Cachoeira8" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_8rv7q")
+autoplay = "default"
+frame_progress = 0.0943018
+
+[node name="Cachoeira9" type="AnimatedSprite2D" parent="."]
+position = Vector2(16, -16)
+sprite_frames = SubResource("SpriteFrames_8rv7q")
+autoplay = "default"
+frame_progress = 0.51293
+
+[node name="Cachoeira" type="AnimatedSprite2D" parent="."]
+position = Vector2(16, 0)
+sprite_frames = SubResource("SpriteFrames_8rv7q")
+autoplay = "default"
+frame_progress = 0.51293
+
+[node name="Cachoeira10" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -80)
+sprite_frames = SubResource("SpriteFrames_8rv7q")
+autoplay = "default"
+frame_progress = 0.51293
+
+[node name="Cachoeira11" type="AnimatedSprite2D" parent="."]
+position = Vector2(16, -80)
+sprite_frames = SubResource("SpriteFrames_8rv7q")
+autoplay = "default"
+frame_progress = 0.51293
+
+[node name="Cachoeira12" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -96)
+sprite_frames = SubResource("SpriteFrames_8rv7q")
+autoplay = "default"
+frame_progress = 0.51293
+
+[node name="Cachoeira13" type="AnimatedSprite2D" parent="."]
+position = Vector2(16, -96)
+sprite_frames = SubResource("SpriteFrames_8rv7q")
+autoplay = "default"
+frame_progress = 0.51293
+
+[node name="Cachoeira14" type="AnimatedSprite2D" parent="."]
+position = Vector2(16, -112)
+sprite_frames = SubResource("SpriteFrames_8rv7q")
+autoplay = "default"
+frame_progress = 0.51293
+
+[node name="Cachoeira15" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -112)
+sprite_frames = SubResource("SpriteFrames_8rv7q")
+autoplay = "default"
+frame_progress = 0.51293
+
+[node name="Cachoeira16" type="AnimatedSprite2D" parent="."]
+position = Vector2(16, -128)
+sprite_frames = SubResource("SpriteFrames_8rv7q")
+autoplay = "default"
+frame_progress = 0.51293
+
+[node name="Cachoeira17" type="AnimatedSprite2D" parent="."]
+z_index = 4
+position = Vector2(0, -128)
+sprite_frames = SubResource("SpriteFrames_8rv7q")
+autoplay = "default"
+frame_progress = 0.51293

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0pqvus2gqdtl"]
+
+[ext_resource type="Texture2D" uid="uid://basyfav30wflq" path="res://Sprites/Tilemap.png" id="1_jwqgc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0a874"]
+atlas = ExtResource("1_jwqgc")
+region = Rect2(112, 84, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lssre"]
+atlas = ExtResource("1_jwqgc")
+region = Rect2(128, 84, 16, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wlnc2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0a874")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lssre")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Enemy 1" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_wlnc2")
+autoplay = "default"
+frame_progress = 0.762765

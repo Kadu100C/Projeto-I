@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://c77jmc81hvbws"]
+
+[ext_resource type="Texture2D" uid="uid://basyfav30wflq" path="res://Sprites/Tilemap.png" id="1_3j6ra"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1o55a"]
+atlas = ExtResource("1_3j6ra")
+region = Rect2(64, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgt3l"]
+atlas = ExtResource("1_3j6ra")
+region = Rect2(64, 80, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rmtmh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1o55a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgt3l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Awa" type="AnimatedSprite2D"]
+z_index = 6
+sprite_frames = SubResource("SpriteFrames_rmtmh")
+autoplay = "default"
+frame_progress = 0.685989
