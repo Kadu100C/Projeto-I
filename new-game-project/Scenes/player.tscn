@@ -23,13 +23,13 @@ region = Rect2(51, 0, 17, 36)
 atlas = ExtResource("1_v0iea")
 region = Rect2(85, 0, 17, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3smsa"]
-atlas = ExtResource("1_v0iea")
-region = Rect2(119, 0, 17, 36)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_x3wgy"]
 atlas = ExtResource("1_v0iea")
 region = Rect2(102, 0, 17, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3smsa"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(119, 0, 17, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8erm5"]
 atlas = ExtResource("1_v0iea")
@@ -83,17 +83,17 @@ animations = [{
 "texture": SubResource("AtlasTexture_fkybt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3smsa")
+"texture": SubResource("AtlasTexture_x3wgy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x3wgy")
+"texture": SubResource("AtlasTexture_3smsa")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8erm5")
 }],
 "loop": true,
 "name": &"2 Run",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -133,13 +133,14 @@ animations = [{
 size = Vector2(7, 27)
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_x3wgy")
-animation = &"2 Run"
+animation = &"1 Idle"
 autoplay = "1 Idle"
-frame_progress = 0.756275
+frame_progress = 0.0546777
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
