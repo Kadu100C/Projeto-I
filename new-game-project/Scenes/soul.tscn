@@ -1,29 +1,27 @@
-[gd_scene load_steps=8 format=3 uid="uid://ccht7mt74cg3l"]
+[gd_scene load_steps=9 format=3 uid="uid://ccht7mt74cg3l"]
 
+[ext_resource type="Script" uid="uid://domg88c08ng1i" path="res://Scripts/soul.gd" id="1_dmpwr"]
 [ext_resource type="Texture2D" uid="uid://byuan7qfttvwy" path="res://Sprites/souls.png" id="1_jrtix"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dmpwr"]
-atlas = ExtResource("1_jrtix")
-region = Rect2(0, 0, 10, 10)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ey5r1"]
 atlas = ExtResource("1_jrtix")
-region = Rect2(10, 0, 10, 10)
+region = Rect2(0, 0, 10, 10)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rjqw3"]
 atlas = ExtResource("1_jrtix")
-region = Rect2(20, 0, 10, 10)
+region = Rect2(10, 0, 10, 10)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q7yo3"]
 atlas = ExtResource("1_jrtix")
+region = Rect2(20, 0, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hye4i"]
+atlas = ExtResource("1_jrtix")
 region = Rect2(30, 0, 10, 10)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_hye4i"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_aypje"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dmpwr")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ey5r1")
 }, {
@@ -32,23 +30,25 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_q7yo3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hye4i")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aypje"]
-size = Vector2(4.44444, 6.66667)
+[sub_resource type="CircleShape2D" id="CircleShape2D_yxap1"]
+radius = 3.16228
 
-[node name="Soul" type="AnimatedSprite2D"]
-z_index = 4
-position = Vector2(1.19209e-07, -1.19209e-07)
-scale = Vector2(1.8, 1.8)
-sprite_frames = SubResource("SpriteFrames_hye4i")
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_dmpwr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_aypje")
 autoplay = "default"
-frame_progress = 0.0577146
+frame_progress = 0.38149
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -3.31137e-08)
-shape = SubResource("RectangleShape2D_aypje")
+shape = SubResource("CircleShape2D_yxap1")
