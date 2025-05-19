@@ -138,12 +138,11 @@ script = ExtResource("1_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_x3wgy")
-animation = &"1 Idle"
+animation = &"4 Fall"
 autoplay = "1 Idle"
-frame_progress = 0.0546777
+frame_progress = 0.107031
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 z_index = 5
 position = Vector2(0.5, 2.5)
 shape = SubResource("RectangleShape2D_h4iuc")
