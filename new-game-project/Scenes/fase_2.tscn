@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://b8m2mcybf8avy"]
+[gd_scene load_steps=33 format=4 uid="uid://b8m2mcybf8avy"]
 
 [ext_resource type="Texture2D" uid="uid://basyfav30wflq" path="res://Sprites/Tilemap.png" id="1_1blhx"]
 [ext_resource type="PackedScene" uid="uid://bs1atkgu16565" path="res://Scenes/player.tscn" id="1_w016j"]
@@ -18,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://cxn485ofoqdvh" path="res://Sprites/coin 4.png" id="16_w5cj8"]
 [ext_resource type="FontFile" uid="uid://cew4qp4bliyk7" path="res://FONTS/fonts/PixelOperator8.ttf" id="17_c4kt2"]
 [ext_resource type="Texture2D" uid="uid://jsb6w54qwrmu" path="res://Sprites/Icon.png" id="18_jl0xc"]
+[ext_resource type="PackedScene" uid="uid://ccht7mt74cg3l" path="res://Scenes/soul.tscn" id="19_gjof6"]
+[ext_resource type="Script" uid="uid://cx0a7823ono0b" path="res://Scenes/to_fase3.gd" id="20_8qnge"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1blhx"]
 texture = ExtResource("1_1blhx")
@@ -96,7 +98,7 @@ texture = ExtResource("1_1blhx")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_1blhx")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eoqrh"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xgl14"]
 texture = ExtResource("1_1blhx")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -152,7 +154,22 @@ texture = ExtResource("1_1blhx")
 
 [sub_resource type="TileSet" id="TileSet_p0386"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_eoqrh")
+sources/0 = SubResource("TileSetAtlasSource_xgl14")
+
+[sub_resource type="Animation" id="Animation_lhuwr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(616, 163)]
+}
 
 [sub_resource type="Animation" id="Animation_lhuwr"]
 length = 0.001
@@ -240,6 +257,9 @@ frame_2/texture = ExtResource("15_xgl14")
 frame_2/duration = 1.0
 frame_3/texture = ExtResource("16_w5cj8")
 frame_3/duration = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5cj8"]
+size = Vector2(20, 96)
 
 [node name="Fase 2" type="Node2D"]
 
@@ -344,11 +364,11 @@ z_index = 6
 position = Vector2(360, 280)
 
 [node name="Cachoeira2" parent="cachoeira" instance=ExtResource("7_vjvqt")]
-z_index = 6
+z_index = 7
 position = Vector2(360, 136)
 
 [node name="Cachoeira3" parent="cachoeira" instance=ExtResource("7_vjvqt")]
-z_index = 6
+z_index = 7
 position = Vector2(360, -8)
 
 [node name="Cachoeira4" parent="cachoeira" instance=ExtResource("7_vjvqt")]
@@ -486,3 +506,197 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 texture = ExtResource("18_jl0xc")
+
+[node name="Souls" type="Node" parent="."]
+
+[node name="Area2D" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(352, 224)
+
+[node name="Area2D2" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(368, 224)
+
+[node name="Area2D3" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(432, 272)
+
+[node name="Area2D4" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(448, 272)
+
+[node name="Area2D5" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(464, 272)
+
+[node name="Area2D15" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(544, 256)
+
+[node name="Area2D6" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(672, 224)
+
+[node name="Area2D7" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(736, 192)
+
+[node name="Area2D8" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(736, 176)
+
+[node name="Area2D9" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(800, 176)
+
+[node name="Area2D10" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(800, 160)
+
+[node name="Area2D11" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(800, 144)
+
+[node name="Area2D12" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(864, 224)
+
+[node name="Area2D13" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(864, 208)
+
+[node name="Area2D14" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(928, 256)
+
+[node name="Area2D16" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1032, 320)
+
+[node name="Area2D17" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1048, 320)
+
+[node name="Area2D18" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1064, 320)
+
+[node name="Area2D19" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1080, 320)
+
+[node name="Area2D20" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1080, 304)
+
+[node name="Area2D21" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1064, 304)
+
+[node name="Area2D22" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1048, 304)
+
+[node name="Area2D23" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1032, 304)
+
+[node name="Area2D24" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1312, 240)
+
+[node name="Area2D25" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1312, 224)
+
+[node name="Area2D26" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1312, 208)
+
+[node name="Area2D27" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1280, 160)
+
+[node name="Area2D28" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1280, 144)
+
+[node name="Area2D31" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1400, 128)
+
+[node name="Area2D32" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1448, 128)
+
+[node name="Area2D33" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1296, 64)
+
+[node name="Area2D34" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1296, 48)
+
+[node name="Area2D35" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1296, 32)
+
+[node name="Area2D36" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1400, 40)
+
+[node name="Area2D37" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1416, 56)
+
+[node name="Area2D38" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1384, 24)
+
+[node name="Area2D39" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1432, -48)
+
+[node name="Area2D40" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1496, -64)
+
+[node name="Area2D41" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1512, -64)
+
+[node name="Area2D42" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1496, -128)
+
+[node name="Area2D43" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1488, -192)
+
+[node name="Area2D44" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1600, -208)
+
+[node name="Area2D45" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1616, -208)
+
+[node name="Area2D29" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1160, 112)
+
+[node name="Area2D30" parent="Souls" instance=ExtResource("19_gjof6")]
+z_index = 7
+position = Vector2(1160, 88)
+
+[node name="to_fase3" type="Area2D" parent="."]
+position = Vector2(1718, -222)
+collision_mask = 2
+script = ExtResource("20_8qnge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="to_fase3"]
+z_index = 4
+position = Vector2(28, -18)
+shape = SubResource("RectangleShape2D_w5cj8")
+
+[connection signal="body_entered" from="to_fase3" to="to_fase3" method="_on_body_entered"]
