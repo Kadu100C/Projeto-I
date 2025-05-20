@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bijqwahtqmist"]
+
+[ext_resource type="Script" uid="uid://deufn4v0orepa" path="res://Scripts/para_tela_inicial.gd" id="1_wma5v"]
+[ext_resource type="PackedScene" uid="uid://bs1atkgu16565" path="res://Scenes/player.tscn" id="2_wsgnc"]
+
+[node name="Tela Final" type="Node2D"]
+script = ExtResource("1_wma5v")
+
+[node name="Para o começo" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Voltar para a Tela Inicial"
+
+[node name="Player" parent="." instance=ExtResource("2_wsgnc")]
+position = Vector2(-87, 13)
+
+[connection signal="button_down" from="Para o começo" to="." method="_on_para_o_começo_button_down"]
