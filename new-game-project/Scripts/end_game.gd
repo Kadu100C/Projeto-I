@@ -1,13 +1,12 @@
 extends Area2D
 
 
-@onready var end_timer: Timer = $end_timer
+@onready var endtimer: Timer = $endtimer
 
 
-func _on_body_entered(body: Node2D) -> void:
+
+func _on_body_entered(body: CharacterBody2D):
 	get_tree().call_group("Player", "die")
-	end_timer.start()
-
-
-func _on_timer_timeout() -> void:
+	endtimer.start()
+func _on_endtimer_timeout():
 	get_tree().change_scene_to_file("res://Scenes/tela_final.tscn")
