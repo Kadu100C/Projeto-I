@@ -4,5 +4,6 @@ var go = false
 
 
 func _on_body_entered(body: CharacterBody2D):
-	get_tree().change_scene_to_file("res://Scenes/fase_2.tscn")
+	AnimationFade.load_scene("res://Scenes/fase_2.tscn")
+	#get_tree().change_scene_to_file("res://Scenes/fase_2.tscn")
 	

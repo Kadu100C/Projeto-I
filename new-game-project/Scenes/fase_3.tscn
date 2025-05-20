@@ -166,8 +166,8 @@ size = Vector2(41, 104)
 [node name="Fase 3" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(91, -35)
-zoom = Vector2(8, 8)
+position = Vector2(77, -33)
+zoom = Vector2(6, 6)
 
 [node name="TileMap2" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_dm0oo")
@@ -296,7 +296,9 @@ position = Vector2(110.5, -40)
 shape = SubResource("RectangleShape2D_sspfj")
 
 [node name="endtimer" type="Timer" parent="End game"]
-wait_time = 2.0
+wait_time = 3.0
 one_shot = true
 
 [connection signal="body_entered" from="End game" to="End game" method="_on_body_entered"]
+[connection signal="timeout" from="End game/endtimer" to="Player" method="_on_endtimer_timeout"]
+[connection signal="timeout" from="End game/endtimer" to="End game" method="_on_endtimer_timeout"]

@@ -8,5 +8,7 @@ extends Area2D
 func _on_body_entered(body: CharacterBody2D):
 	get_tree().call_group("Player", "die")
 	endtimer.start()
-func _on_endtimer_timeout():
-	get_tree().change_scene_to_file("res://Scenes/tela_final.tscn")
+
+func _on_endtimer_timeout() -> void:
+	AnimationFade.load_scene("res://Scenes/tela_final.tscn")
+	#get_tree().change_scene_to_file("res://Scenes/tela_final.tscn")

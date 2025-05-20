@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Project-I"
-run/main_scene="uid://cwf0j8nd53tmh"
+run/main_scene="uid://fj4yshaqb1io"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Globals="*res://singletons/globals.gd"
+AnimationFade="*res://Scenes/animation_fade.tscn"
 
 [global_group]
 

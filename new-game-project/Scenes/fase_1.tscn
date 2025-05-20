@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://cwf0j8nd53tmh"]
+[gd_scene load_steps=39 format=4 uid="uid://cwf0j8nd53tmh"]
 
 [ext_resource type="Texture2D" uid="uid://basyfav30wflq" path="res://Sprites/Tilemap.png" id="1_acukj"]
 [ext_resource type="PackedScene" uid="uid://bs1atkgu16565" path="res://Scenes/player.tscn" id="2_cq7l2"]
@@ -21,6 +21,7 @@
 [ext_resource type="FontFile" uid="uid://cew4qp4bliyk7" path="res://FONTS/fonts/PixelOperator8.ttf" id="18_w5vuh"]
 [ext_resource type="Texture2D" uid="uid://jsb6w54qwrmu" path="res://Sprites/Icon.png" id="19_aek52"]
 [ext_resource type="Script" uid="uid://bxsgvn7uptvm3" path="res://Scripts/to_scene_2.gd" id="21_4ic0f"]
+[ext_resource type="PackedScene" uid="uid://ofov4qcamqfm" path="res://Scenes/pause_menu.tscn" id="22_bidnh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cq7l2"]
 texture = ExtResource("1_acukj")
@@ -309,7 +310,7 @@ z_index = 5
 position = Vector2(65, -16)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(5, 5)
+zoom = Vector2(4.5, 4.5)
 limit_left = -50
 limit_top = -320
 limit_right = 1550
@@ -565,6 +566,8 @@ script = ExtResource("21_4ic0f")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(1516, -85)
 shape = SubResource("RectangleShape2D_4ic0f")
+
+[node name="pause_menu" parent="." instance=ExtResource("22_bidnh")]
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_shape_entered" from="Area2D" to="Area2D" method="_on_body_shape_entered"]
