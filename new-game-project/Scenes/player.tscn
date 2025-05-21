@@ -140,6 +140,7 @@ script = ExtResource("1_cvnsp")
 sprite_frames = SubResource("SpriteFrames_x3wgy")
 animation = &"5 DIe"
 autoplay = "1 Idle"
+frame = 1
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

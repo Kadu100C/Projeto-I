@@ -167,7 +167,7 @@ size = Vector2(41, 104)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(77, -33)
-zoom = Vector2(6, 6)
+zoom = Vector2(9, 9)
 
 [node name="TileMap2" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_dm0oo")

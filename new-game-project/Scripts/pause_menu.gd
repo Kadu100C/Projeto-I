@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @onready var resume_btn: Button = $menu_holder/resume_btn
+@onready var quit_btn: Button = $menu_holder/quit_btn
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,7 +11,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
 
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
@@ -23,4 +23,6 @@ func _on_resume_btn_pressed() -> void:
 	visible = false
 
 func _on_quit_btn_pressed() -> void:
+	get_tree().paused = false
 	get_tree().change_scene_to_file("res://Scenes/menu_inicial.tscn")
+	

@@ -30,16 +30,19 @@ offset_top = -33.0
 offset_bottom = 33.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 30
 
 [node name="resume_btn" type="Button" parent="menu_holder"]
 layout_mode = 2
 theme = ExtResource("2_1och7")
+theme_override_font_sizes/font_size = 80
 shortcut = SubResource("Shortcut_1och7")
 text = "RESUME"
 
 [node name="quit_btn" type="Button" parent="menu_holder"]
 layout_mode = 2
 theme = ExtResource("2_1och7")
+theme_override_font_sizes/font_size = 80
 text = "MAIN MENU"
 
 [connection signal="pressed" from="menu_holder/resume_btn" to="." method="_on_resume_btn_pressed"]

@@ -1,9 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bijqwahtqmist"]
+[gd_scene load_steps=3 format=3 uid="uid://bijqwahtqmist"]
 
 [ext_resource type="Script" uid="uid://dhrwadux1pd8x" path="res://Scripts/tela_final.gd" id="1_wsgnc"]
 [ext_resource type="Theme" uid="uid://bxfpwm1v2pme1" path="res://pause_menu.tres" id="2_2lcch"]
-
-[sub_resource type="GDScript" id="GDScript_wsgnc"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_wsgnc")
@@ -21,30 +19,28 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_top = 164.0
-offset_bottom = 196.0
+offset_top = 272.0
+offset_bottom = 352.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="main_menu" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_2lcch")
+theme_override_font_sizes/font_size = 80
 text = "Main Menu"
 
 [node name="Label" type="Label" parent="."]
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -137.0
-offset_right = 292.0
-offset_bottom = -102.0
-grow_vertical = 2
-scale = Vector2(3.93657, 3.93657)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -412.5
+offset_top = 364.0
+offset_right = 412.5
+offset_bottom = 484.0
+grow_horizontal = 2
 theme = ExtResource("2_2lcch")
-text = "Game End!!
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = SubResource("GDScript_wsgnc")
+theme_override_font_sizes/font_size = 150
+text = "End game!!!"
 
 [connection signal="pressed" from="VBoxContainer/main_menu" to="." method="_on_button_pressed"]

@@ -5,7 +5,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_u4fxu"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="menu_inicial" type="CanvasLayer"]
 script = ExtResource("1_r68fw")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -22,10 +22,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -126.0
-offset_top = -240.0
-offset_right = 126.0
-offset_bottom = -153.0
+offset_left = -335.0
+offset_top = -331.0
+offset_right = 335.0
+offset_bottom = -244.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 8
@@ -34,6 +34,7 @@ size_flags_vertical = 8
 layout_mode = 2
 size_flags_vertical = 4
 theme = ExtResource("2_envsn")
+theme_override_font_sizes/font_size = 80
 text = "Start Game"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
@@ -54,19 +55,23 @@ size_flags_vertical = 8
 [node name="quit_game" type="Button" parent="VBoxContainer2"]
 layout_mode = 2
 theme = ExtResource("2_envsn")
+theme_override_font_sizes/font_size = 80
 text = "Quit Game"
 
 [node name="Label" type="Label" parent="."]
-anchors_preset = 4
+anchors_preset = -1
+anchor_left = 0.234
 anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -202.0
-offset_right = 133.0
-offset_bottom = -186.0
+anchor_right = 0.765
+anchor_bottom = 0.557
+offset_left = 0.719971
+offset_top = -276.0
+offset_right = -900.8
+offset_bottom = -321.56
+grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(8.63685, 8.63685)
 size_flags_horizontal = 4
-size_flags_vertical = 1
 theme = ExtResource("2_envsn")
 text = "Project-I"
 label_settings = SubResource("LabelSettings_u4fxu")
